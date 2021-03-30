@@ -582,7 +582,51 @@ hr {
 		padding-left: 40px;
 	}
 
+/*********************************************************************************/
+/* BOX MATCHING PAGE                                                             */
+/*********************************************************************************/
 
+.boxed1 {
+	border: 1px solid green ;
+	padding: 50px 50px 50px 50px;
+}
+
+.boxed1 img{
+	width: 100px;
+	height: 100px;
+	padding-right: 10px;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+.boxed1 h1{
+	display: inline-block;
+}
+
+.boxed2 {
+	border: 1px solid green ;
+	padding: 50px 50px 50px 50px;
+}
+
+.boxed2 img{
+	width: 200px;
+	height: 200px;
+	padding-right: 10px;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+.boxed2 .b2info{
+	display: inline-block;
+}
+
+.boxed2 .b2info p{
+	display: inline-block;
+}
+
+.boxed2 .b2info h2{
+	display: inline-block;
+}
 
 
 
