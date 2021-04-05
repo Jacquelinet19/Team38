@@ -6,28 +6,7 @@
     <link rel="stylesheet" href="mentor_signup_style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-   <script>
-       function saveValues() {
-           //window.location.hrep = "matchingPage.html";
-          // try {
-              /* var nameValue = document.getElementByName("name").value;
-               var emailValue = document.getElementByName("email").value;
-               var userNameValue = document.getElementByName("username").value;
-               var roleValue = document.getElementByName("role").value;
-               var collegeValue = document.getElementByName("college").value;
-               var introValue = document.getElementByName("intro").value;
-               var expertValue = document.getElementByName("expert").value;
-               var params = "name="+ nameValue + "&email=" + emailValue + "&userName=" + userNameValue + "&role=" + roleValue + "&college=" + collegeValue + "&intro=" + introValue +
-               "&expert=" + expertValue;
-               var xmlhttp = new XMLHTTPREQUEST();
-               //xmlhttp.onreadystatechange = 
-               xmlhttp.open(methodtype, "/new-mentor/NewMentorServlet", true);
-               xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-               xmlhttp.send(params);
-               */
-         //  }
-       }
-   </script>
+
   </head>
   <body>
 
@@ -36,7 +15,7 @@
 
   	 <!--Application form-->
   	 <div class = "container">
-                <!--<form onsubmit = "saveValues()">-->
+                
             <form action = "/new-mentor" method = "POST">
                 <label for="name"><b>Enter your name:</b></label>
                 <input class="input" name="name"placeholder="name"/>
@@ -66,11 +45,8 @@
                 <input class="input" name="expert" placeholder="ex: Java" />
                 <br/>
                 <br/>
-                <input id="submitButton" class="input" type="submit" />
-                                
+                <input id="submitButton" class="input" type="submit" />        
             </form>
        </div>
-
   </body>
-
 </html>
