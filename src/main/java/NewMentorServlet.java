@@ -39,7 +39,6 @@ public class NewMentorServlet extends HttpServlet {
             .set("mentorCollege", mentorCollege)
             .set("mentorIntro", mentorIntro)
             .set("mentorExpertise", mentorExpertise)
-            //.set("mentorDesiredSkills", mentorDesiredSkills)
             .build();
     datastore.put(mentorEntity);
 
