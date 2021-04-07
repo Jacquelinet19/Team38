@@ -12,19 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-async function addRandomGreeting() {
-  const responseFromServer = await fetch('/Hello');
-  const textFromResponse = await responseFromServer.json();
-  console.log(textFromResponse);
-  const quoteIndex = Math.floor(Math.random() * textFromResponse.length);
-  const servletContainer = document.getElementById('hello-container');
-  const quote = textFromResponse[quoteIndex];
-  servletContainer.innerText = quote;
-  console.log(textFromResponse);
-}
+
 
 
 
