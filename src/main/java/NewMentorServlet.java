@@ -28,6 +28,7 @@ public class NewMentorServlet extends HttpServlet {
     
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    response.sendRedirect("/matchingPage.html");
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("mentor");
     FullEntity mentorEntity =
         Entity.newBuilder(keyFactory.newKey())
@@ -41,6 +42,6 @@ public class NewMentorServlet extends HttpServlet {
             .build();
     datastore.put(mentorEntity);
 
-    response.sendRedirect("/index.html");
+    //response.sendRedirect("/matchingPage.html");
   }
 }
