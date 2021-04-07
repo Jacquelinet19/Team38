@@ -1,3 +1,4 @@
+
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
@@ -28,7 +29,7 @@ public class NewMentorServlet extends HttpServlet {
     
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    response.sendRedirect("/matchingPage.html?username=mentorUsername");
+    response.sendRedirect("/matchingPage.html");
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("mentor");
     FullEntity mentorEntity =
         Entity.newBuilder(keyFactory.newKey())
@@ -45,4 +46,5 @@ public class NewMentorServlet extends HttpServlet {
 
     //response.sendRedirect("/matchingPage.html");
   }
+
 }
