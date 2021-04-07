@@ -28,7 +28,7 @@ public class NewMentorServlet extends HttpServlet {
     
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    response.sendRedirect("/matchingPage.html");
+    response.sendRedirect("/matchingPage.html?username=mentorUsername");
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("mentor");
     FullEntity mentorEntity =
         Entity.newBuilder(keyFactory.newKey())

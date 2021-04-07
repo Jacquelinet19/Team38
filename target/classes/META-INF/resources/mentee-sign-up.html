@@ -1,5 +1,7 @@
 <html>
-    <link rel="stylesheet" type="text/css" href="mentee-sign-up.css" />
+    <link rel="stylesheet" href="mentor_signup_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     
     <head>
     <h1>Mentee Profile</h1>
@@ -7,7 +9,7 @@
 
     <body>
         <div class="mentee-sign-up-form">
-            <form>
+            <form method="POST" action="/new-mentee">
                 <div>
                 <label for=name>Name:</label>
                 <input type="text" id="name" name="name">
@@ -15,6 +17,9 @@
                 <div>
                 <label for=email>Email:</label>
                 <input type="text" id="email" name="email">
+                </div>
+                <label for=username>Create a username:</label>
+                <input type="text" id="username" name="username">
                 </div>
                 <div>
                 <label for=school>College/University:</label>

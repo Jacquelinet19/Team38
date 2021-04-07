@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mentor Profile</title>
+    <link rel="stylesheet" href="mentor_signup_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+
+  	<h1 class = "title">Mentor Profile</h1>
+  	<hr>
+
+  	 <!--Application form-->
+  	 <div class = "container">
+                
+            <form action = "/new-mentor" method = "POST">
+                <label for="name"><b>Enter your name:</b></label>
+                <input class="input" name="name"placeholder="name"/>
+                <br/>
+                <br/>
+                <label for="email"><b>Enter your email:</b></label>
+                <input class="input" name="email" placeholder="name@gmail.com" />
+                <br/>
+                <br/>
+                <label for=username>Creat a username:</label>
+                <input type="text" id="username" name="username">
+                <br/>
+                <br/>
+                <label for="role"><b>Current Role/Job:</b></label>
+                <input class="input" name="role" placeholder="ex: Software Engineer" />
+                <br/>
+                <br/>
+                <label for="college"><b>College/University:</b></label>
+                <input class="input" name="college" placeholder="university" />
+                <br/>
+                <br/>
+                <label for="intro"><b>Introduce yourself:</b></label>
+                <input id="message" class="input" name="intro"></input>
+                <br/>
+                <br/>
+                <label for="expert"><b>Areas of expertise:</b></label>
+                <input class="input" name="expert" placeholder="ex: Java" />
+                <br/>
+                <br/>
+                <input id="submitButton" class="input" type="submit" />        
+            </form>
+       </div>
+  </body>
+</html>
