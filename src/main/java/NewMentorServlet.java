@@ -1,3 +1,4 @@
+
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
@@ -39,9 +40,11 @@ public class NewMentorServlet extends HttpServlet {
             .set("mentorCollege", mentorCollege)
             .set("mentorIntro", mentorIntro)
             .set("mentorExpertise", mentorExpertise)
+            //.set("mentorDesiredSkills", mentorDesiredSkills)
             .build();
     datastore.put(mentorEntity);
 
     //response.sendRedirect("/matchingPage.html");
   }
+
 }
