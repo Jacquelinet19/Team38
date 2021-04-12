@@ -31,6 +31,8 @@ public class NewMenteeServlet extends HttpServlet {
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
+    response.sendRedirect("/matchingPage.html");
+
     Key menteeKey = datastore.newKeyFactory()
                     .setKind("Mentee")
                     .newKey(menteeUsername);
@@ -45,7 +47,5 @@ public class NewMenteeServlet extends HttpServlet {
             .set("menteeDesiredSkills", menteeDesiredSkills)
             .build();
     datastore.put(mentee);
-    response.sendRedirect("/matchingPage.html");
-    
   }
 }
