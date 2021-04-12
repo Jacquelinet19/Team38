@@ -1,4 +1,5 @@
 import com.google.cloud.datastore.Query;
+import com.google.cloud.datastore.EntityQuery;
 import com.google.cloud.datastore.QueryResults;
 import com.google.cloud.datastore.ReadOption;
 import com.google.cloud.datastore.StringValue;
@@ -25,15 +26,19 @@ import org.jsoup.safety.Whitelist;
 @WebServlet("/log-in")
 public class LogInServlet extends HttpServlet {
 
-  @Override
-  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Sanitize user input to remove HTML tags and JavaScript.
-    String inp_username = Jsoup.clean(request.getParameter("un"), Whitelist.none());
 
-    Query<Entity> query = Query.newEntityQueryBuilder()
-        .setFilter(PropertyFilter.q(username, inp_username)).build();
+        String inp_username = Jsoup.clean(request.getParameter("un"), Whitelist.none());
 
-    
-    response.sendRedirect("/matchingPage.html");
-  }
+        Query<Entity> query = Query.newEntityQueryBuilder()
+            .setFilter(PropertyFilter.eq("username", inp_username)).build();
+
+        String direction = "";
+        if (query != null){
+            direction = inp_username;
+        }
+        response.sendRedirect("/matchingPage.html"+direction);
+    }
 }
