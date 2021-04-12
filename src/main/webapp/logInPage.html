@@ -9,17 +9,15 @@
 </head>
 
 <body>
-  <div class="main">
-    <p class="sign" align="center">Sign in</p>
-    <form action = "/log-in" method = "POST">
-      <input class="un " type="text" align="center" placeholder="Username">
-      <div class="submit-button">
-        <input type="submit" value="Sign in">
-      </div>
-            
-                
+    <div class="main">
+        <p class="sign" align="center">Sign in</p>
+        <form action = "/log-in" method = "POST">
+            <label for="Username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="username">
+            <div class="submit-button">
+                <input type="submit" value="Log in" id="submitButton">
+            </div>
+        </form>
     </div>
-     
 </body>
-
 </html>
