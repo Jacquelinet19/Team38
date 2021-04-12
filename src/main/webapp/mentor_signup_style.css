@@ -1,12 +1,16 @@
-
+html{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
 
 h1{
-	text-align: center;
+    text-align: center;
+    color: #16a085;
 }
 
 
 #submitButton{
-	background-color: #34AD34;
+	background-color: #16a085;
 	border-radius: 12px;
 	font-size: 13px;
 	width:10%;
@@ -15,7 +19,7 @@ h1{
 }
 
 #submitButton:hover{
-	background-color: #2A8A2A;
+	background-color: #107c67;
 	cursor: pointer;
 }
 
@@ -24,16 +28,17 @@ hr{
 }
 
 .container{
-	margin-left: 250px;
+	margin-left: 300px;
 }
 
 input{
-	width:50%;
-	padding: 15px;
+	width:75%;
+	padding: 12px 20px;
 	margin: 5px 0 22px 0;
 	border: none;
 	background: #EEEEEE;
-	display: inline-block;
+    display: block;
+    box-sizing: border-box;
 	
 
 }

@@ -5,10 +5,11 @@
     
     <head>
     <h1>Mentee Profile</h1>
+    <hr>
     </head>
 
     <body>
-        <div class="mentee-sign-up-form">
+        <div class="container">
             <form method="POST" action="/new-mentee">
                 <div>
                 <label for=name>Name:</label>
@@ -18,6 +19,7 @@
                 <label for=email>Email:</label>
                 <input type="text" id="email" name="email">
                 </div>
+                <div>
                 <label for=username>Create a username:</label>
                 <input type="text" id="username" name="username">
                 </div>
@@ -42,7 +44,7 @@
                 <input type="text" id="skill-desire" name="skill-desire">
                 </div>
                  <div class="submit-button">
-                    <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submitButton">
                 </div>
             </form>
         </div>

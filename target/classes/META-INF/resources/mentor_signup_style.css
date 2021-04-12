@@ -1,0 +1,49 @@
+html{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+h1{
+    text-align: center;
+    color: #16a085;
+}
+
+
+#submitButton{
+	background-color: #16a085;
+	border-radius: 12px;
+	font-size: 13px;
+	width:10%;
+	color: white;
+	margin-left: 350px;
+}
+
+#submitButton:hover{
+	background-color: #107c67;
+	cursor: pointer;
+}
+
+hr{
+	border: 1px solid #f1f1f1;
+}
+
+.container{
+	margin-left: 300px;
+}
+
+input{
+	width:75%;
+	padding: 12px 20px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #EEEEEE;
+    display: block;
+    box-sizing: border-box;
+	
+
+}
+
+input:focus{
+  background-color: #ddd;
+  outline: none;
+}
