@@ -1,4 +1,3 @@
-
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
@@ -28,10 +27,9 @@ public class NewMentorServlet extends HttpServlet {
     String mentorIntro = Jsoup.clean(request.getParameter("intro"), Whitelist.none());
     String mentorExpertise = Jsoup.clean(request.getParameter("expert"), Whitelist.none());
     
-
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
-    response.sendRedirect("/matchingPage.html");
+    response.sendRedirect("/matchingPage.html?username="+mentorUsername);
 
     Key mentorKey = datastore.newKeyFactory()
                     .setKind("Mentor")
@@ -44,11 +42,7 @@ public class NewMentorServlet extends HttpServlet {
             .set("mentorCollege", mentorCollege)
             .set("mentorIntro", mentorIntro)
             .set("mentorExpertise", mentorExpertise)
-            //.set("mentorDesiredSkills", mentorDesiredSkills)
             .build();
     datastore.put(mentor);
-
-    //response.sendRedirect("/matchingPage.html");
   }
-
 }

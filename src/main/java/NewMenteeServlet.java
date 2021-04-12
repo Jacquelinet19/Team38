@@ -1,4 +1,3 @@
-
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
@@ -31,7 +30,7 @@ public class NewMenteeServlet extends HttpServlet {
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
-    response.sendRedirect("/matchingPage.html");
+    response.sendRedirect("/matchingPage.html?username="+menteeUsername);
 
     Key menteeKey = datastore.newKeyFactory()
                     .setKind("Mentee")

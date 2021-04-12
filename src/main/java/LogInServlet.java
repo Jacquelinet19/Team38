@@ -26,19 +26,35 @@ import org.jsoup.safety.Whitelist;
 @WebServlet("/log-in")
 public class LogInServlet extends HttpServlet {
 
+    private final Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+    
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Sanitize user input to remove HTML tags and JavaScript.
 
-        String inp_username = Jsoup.clean(request.getParameter("un"), Whitelist.none());
-
-        Query<Entity> query = Query.newEntityQueryBuilder()
-            .setFilter(PropertyFilter.eq("username", inp_username)).build();
-
-        String direction = "";
-        if (query != null){
+        String inp_username = Jsoup.clean(request.getParameter("username"), Whitelist.none());
+        
+        QueryResults<Entity> results;
+        
+        //Check if it's a mentor
+        Query<Entity> queryMentor = Query.newEntityQueryBuilder().setKind("Mentor")
+            .setFilter(PropertyFilter.eq("mentorUsername", inp_username)).build();
+        results = datastore.run(queryMentor);        
+        
+        String direction = "#";
+        if (results != null){
             direction = inp_username;
         }
-        response.sendRedirect("/matchingPage.html"+direction);
+        else{
+            //Check if it's a mentee
+            Query<Entity> queryMentee = Query.newEntityQueryBuilder().setKind("Mentee")
+                .setFilter(PropertyFilter.eq("menteeUsername", inp_username)).build();
+            results = datastore.run(queryMentee);
+            
+            if (results != null){
+                direction = inp_username;
+            }
+        }
+        response.sendRedirect("/matchingPage.html?username="+direction);
     }
 }

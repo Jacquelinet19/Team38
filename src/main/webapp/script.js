@@ -117,13 +117,7 @@ Notes:
     Next step is to adapt it to work with datastorage
 */
 function addTableCards() {
-
-    /*Could be an option to obtain the value from the redirection from other pages, still in progress...
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const username = urlParams.get('username');*/
-
-    const username = "john123";
+    var username = validateUsername();
 
     var myMentees = [
         new dummyDBMentee('John S', 'john@myemail.com', 'john123', 'mySchool', 2021, "I'm a student", "I like to learn", "C++"),
@@ -166,7 +160,8 @@ Notes:
     Next step is to adapt it to work with datastorage
 */
 function addProfile() {
-    const username = "john123";
+
+    var username = validateUsername();
 
     var myMentees = [
         new dummyDBMentee('John S', 'john@myemail.com', 'john123', 'mySchool', 2021, "I'm a student", "I like to learn", "C++"),
@@ -193,5 +188,33 @@ function addProfile() {
             addMenteeCard(myMentees[i], 0, "profile");
             break;
         }
+    }
+}
+
+function validateUsername(){
+    var url_string = window.location.href;
+    var url = new URL(url_string);
+    var username = url.searchParams.get("username");
+    return username;
+}
+
+function validURL(redirectPage){
+    var username = validateUsername();
+
+    switch(redirectPage){
+        case "homepage":
+            window.location.href = ("index.html?username="+username);
+        
+        case "feed":
+            window.location.href = ("matchingPage.html?username="+username);
+        
+        case "mentee":
+            window.location.href = ("mentee-sign-up.html?username="+username);
+
+        case "mentor":
+            window.location.href = ("mentor.html?username="+username);
+        
+        case "profile":
+            window.location.href = ("profile.html?username="+username);
     }
 }
