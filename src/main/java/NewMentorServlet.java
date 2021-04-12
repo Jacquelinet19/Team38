@@ -1,8 +1,10 @@
+
 import com.google.cloud.datastore.Datastore;
 import com.google.cloud.datastore.DatastoreOptions;
 import com.google.cloud.datastore.Entity;
 import com.google.cloud.datastore.FullEntity;
 import com.google.cloud.datastore.KeyFactory;
+import com.google.cloud.datastore.Key;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,10 +30,13 @@ public class NewMentorServlet extends HttpServlet {
     
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
+
     response.sendRedirect("/matchingPage.html");
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("mentor");
-    FullEntity mentorEntity =
-        Entity.newBuilder(keyFactory.newKey())
+
+    Key mentorKey = datastore.newKeyFactory()
+                    .setKind("Mentor")
+                    .newKey(mentorUsername);
+    Entity mentor = Entity.newBuilder(mentorKey)
             .set("mentorName", mentorName)
             .set("mentorEmail", mentorEmail)
             .set("mentorUsername", mentorUsername)
@@ -39,9 +44,11 @@ public class NewMentorServlet extends HttpServlet {
             .set("mentorCollege", mentorCollege)
             .set("mentorIntro", mentorIntro)
             .set("mentorExpertise", mentorExpertise)
+            //.set("mentorDesiredSkills", mentorDesiredSkills)
             .build();
-    datastore.put(mentorEntity);
+    datastore.put(mentor);
 
     //response.sendRedirect("/matchingPage.html");
   }
+
 }

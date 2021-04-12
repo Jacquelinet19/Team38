@@ -1,4 +1,18 @@
+<<<<<<< HEAD
 /home/clemus/Team38/src/main/java/NewMenteeServlet.java
 /home/clemus/Team38/src/main/java/NewMentorServlet.java
 /home/clemus/Team38/src/main/java/Servlet.java
 /home/clemus/Team38/src/main/java/com/google/sps/ServerMain.java
+=======
+<<<<<<< HEAD
+/home/tyoung/software-product-sprint/mentor_match/src/main/java/NewMenteeServlet.java
+/home/tyoung/software-product-sprint/mentor_match/src/main/java/NewMentorServlet.java
+/home/tyoung/software-product-sprint/mentor_match/src/main/java/com/google/sps/ServerMain.java
+/home/tyoung/software-product-sprint/mentor_match/src/main/java/Servlet.java
+=======
+/home/msalas/Team38/src/main/java/com/google/sps/ServerMain.java
+/home/msalas/Team38/src/main/java/Servlet.java
+/home/msalas/Team38/src/main/java/NewMenteeServlet.java
+/home/msalas/Team38/src/main/java/NewMentorServlet.java
+>>>>>>> 10694dc2a2fdd77df4ca5a3681bd28e81a3ee78e
+>>>>>>> a06405537a9e1d57b6ec9d3bca6584442f766050
