@@ -1,53 +1,82 @@
+<!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="mentor_signup_style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Mentee | MentorMatch</title>
     
-    <head>
-    <h1>Mentee Profile</h1>
-    <hr>
-    </head>
+    <link rel="stylesheet" href="default.css">
+    <!--<link rel="stylesheet" href="mentor_signup_style.css">-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 
-    <body>
-        <div class="container">
-            <form method="POST" action="/new-mentee">
-                <div>
-                <label for=name>Name:</label>
-                <input type="text" id="name" name="name">
+    <script src="script.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="javascript:validURL('homepage');">Homepage</a></li>
+                <li><a href="javascript:validURL('mentor');">Become a mentor</a></li>
+                <li class="current_page_item"><a href="javascript:validURL('mentee');">Become a mentee</a></li>
+                <li><a href="javascript:validURL('login');">Log in</a></li>
+			</ul>
+		</div>
+		<!-- end #menu --> 
+        <div id="header-wrapper">
+            <div id="header" class="container">
+                <div id="logo">
+                    <h1>Mentee's Sign Up</h1>
                 </div>
-                <div>
-                <label for=email>Email:</label>
-                <input type="text" id="email" name="email">
-                </div>
-                <div>
-                <label for=username>Create a username:</label>
-                <input type="text" id="username" name="username">
-                </div>
-                <div>
-                <label for=school>College/University:</label>
-                <input type="school" id="school:" name="school">
-                </div>
-                <div>
-                <label for=year>Current Class Standing:</label>
-                <input type="text" id="year" name="year">
-                </div>
-                <div>
-                <label for=intro>Introduce Yourself:</label>
-                <input type="text" id="intro" name="intro">
-                </div>
-                <div>
-                <label for=reason>Why are you interested in a mentor?</label>
-                <input type="text" id="reason" name="reason">
-                </div>
-                <div>
-                <label for=skill-desire>What skills do you want to develop?</label>
-                <input type="text" id="skill-desire" name="skill-desire">
-                </div>
-                 <div class="submit-button">
-                <input type="submit" value="Submit" id="submitButton">
-                </div>
-            </form>
+            </div>
         </div>
-    </body>
+    </div>
 
+	<div id="page" class="container">
+		<div id="content">
+            <!--Application form-->
+            <div class="container-mentor">
+                <form method="POST" action="/new-mentee">
+                    <div>
+                        <label for=name>Name:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div>
+                        <label for=email>Email:</label>
+                        <input type="text" id="email" name="email">
+                    </div>
+                    <div>
+                        <label for=username>Create a username:</label>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div>
+                        <label for=school>College/University:</label>
+                        <input type="school" id="school:" name="school">
+                    </div>
+                    <div>
+                        <label for=year>Current Class Standing:</label>
+                        <input type="text" id="year" name="year">
+                    </div>
+                    <div>
+                        <label for=intro>Introduce Yourself:</label>
+                        <input type="text" id="intro" name="intro">
+                    </div>
+                    <div>
+                        <label for=reason>Why are you interested in a mentor?</label>
+                        <input type="text" id="reason" name="reason">
+                    </div>
+                    <div>
+                        <label for=skill-desire>What skills do you want to develop?</label>
+                        <input type="text" id="skill-desire" name="skill-desire">
+                    </div>
+                    <div class="submit-button">
+                        <input type="submit" value="Submit" id="submitButton">
+                    </div>
+                </form>
+            </div>
+	    </div>
+    </div>
+</div>
+</body>
 </html>

@@ -1,23 +1,48 @@
-<html>
+<!DOCTYPE html>
 
+<html>
 <head>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <title>Sign in</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Log In | MentorMatch</title>
+
+    <link href="default.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="main">
-        <p class="sign" align="center">Sign in</p>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="javascript:validURL('homepage');">Homepage</a></li>
+                <li><a href="javascript:validURL('mentor');">Become a mentor</a></li>
+                <li><a href="javascript:validURL('mentee');">Become a mentee</a></li>
+                <li class="current_page_item"><a href="javascript:validURL('login');">Log in</a></li>
+			</ul>
+		</div>
+		<!-- end #menu --> 
+        <div id="header-wrapper">
+            <div id="header" class="container">
+                <div id="logo">
+                    <h1>Log In Here</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<div id="page" class="container">
         <form action = "/log-in" method = "POST">
             <label for="Username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="username">
+            <input type="text" id="username-login" name="username" placeholder="username">
             <div class="submit-button">
-                <input type="submit" value="Log in" id="submitButton">
+                <input type="submit" value="Log in" id="submitButton-login">
             </div>
         </form>
     </div>
+</div>
 </body>
 </html>

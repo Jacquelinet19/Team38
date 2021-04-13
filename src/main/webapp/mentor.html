@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Mentor Profile</title>
-    <link rel="stylesheet" href="mentor_signup_style.css">
+
+    <title>Mentor | MentorMatch</title>
+    
+    <link rel="stylesheet" href="default.css">
+    <!--<link rel="stylesheet" href="mentor_signup_style.css">-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
+    <script src="script.js"></script>
+</head>
 
-  	<h1 class = "title">Mentor Profile</h1>
-  	<hr>
+<body>
+<div id="wrapper">
+	<div id="menu-wrapper">
+		<div id="menu" class="container">
+			<ul>
+				<li><a href="javascript:validURL('homepage');">Homepage</a></li>
+                <li class="current_page_item"><a href="javascript:validURL('mentor');">Become a mentor</a></li>
+                <li><a href="javascript:validURL('mentee');">Become a mentee</a></li>
+                <li><a href="javascript:validURL('login');">Log in</a></li>
+			</ul>
+		</div>
+		<!-- end #menu --> 
+        <div id="header-wrapper">
+            <div id="header" class="container">
+                <div id="logo">
+                    <h1>Mentor's Sign Up</h1>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  	 <!--Application form-->
-  	 <div class = "container">
-                
-            <form action = "/new-mentor" method = "POST">
-                <label for="Name">Name:</label>
-                <input class="input" name="name"/>
-                <br/>
-                
-                <label for="email">Email:</label>
-                <input class="input" name="email"/>
-                <br/>
-                
-                <label for=username>Create a username:</label>
-                <input type="text" id="username" name="username"/>
-                <br/>
-                
-                <label for="role">Current Role/Job:</label>
-                <input class="input" name="role" placeholder="ex: Software Engineer"/>
-                <br/>
-                
-                <label for="college">College/University:</label>
-                <input class="input" name="college"/>
-                <br/>
-                
-                <label for="intro">Introduce yourself:</label>
-                <input id="message" class="input" name="intro"></input>
-                <br/>
-                
-                <label for="expert">Area(s) of expertise:</label>
-                <input class="input" name="expert" placeholder="ex: Java"/>
-                <br/>
-                
-                <input id="submitButton" class="input" type="submit"/>        
-            </form>
-       </div>
-  </body>
+	<div id="page" class="container">
+		<div id="content">
+			<!--Application form-->
+  	        <div class = "container-mentor">
+                <form action = "/new-mentor" method = "POST">
+                    <label for="Name">Name:</label>
+                    <input class="input" name="name"/>
+                    <br/>
+                    
+                    <label for="email">Email:</label>
+                    <input class="input" name="email"/>
+                    <br/>
+                    
+                    <label for=username>Create a username:</label>
+                    <input type="text" id="username" name="username"/>
+                    <br/>
+                    
+                    <label for="role">Current Role/Job:</label>
+                    <input class="input" name="role" placeholder="ex: Software Engineer"/>
+                    <br/>
+                    
+                    <label for="college">College/University:</label>
+                    <input class="input" name="college"/>
+                    <br/>
+                    
+                    <label for="intro">Introduce yourself:</label>
+                    <input id="message" class="input" name="intro"></input>
+                    <br/>
+                    
+                    <label for="expert">Area(s) of expertise:</label>
+                    <input class="input" name="expert" placeholder="ex: Java"/>
+                    <br/>
+                    
+                    <input id="submitButton" class="input" type="submit"/>        
+                </form>
+            </div>
+	    </div>
+    </div>
+</div>
+</body>
 </html>

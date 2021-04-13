@@ -1,3 +1,8 @@
+html{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
 html, body {
     height: 100%;
 }
@@ -584,7 +589,7 @@ hr {
     }
 
 /*********************************************************************************/
-/* CARDS MATCHING PAGE                                                             */
+/* CARDS MATCHING PAGE                                                           */
 /*********************************************************************************/
 
 .card {
@@ -631,4 +636,66 @@ hr {
 #card-seemore-button button{
     background: #36bda2;
     border-color: #36bda2;
+}
+
+/*********************************************************************************/
+/* SUBMIT BUTTON MENTOR & MENTEE PAGE                                            */
+/*********************************************************************************/
+
+hr{
+	border: 1px solid #f1f1f1;
+}
+
+#submitButton{
+	background-color: #16a085;
+	border-radius: 12px;
+	font-size: 13px;
+	width:10%;
+	color: white;
+	margin-left: 400px;
+}
+
+#submitButton:hover{
+	background-color: #107c67;
+	cursor: pointer;
+}
+
+input{
+	width:100%;
+	padding: 12px 20px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #EEEEEE;
+    display: block;
+    box-sizing: border-box;
+}
+
+input:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+#username-login{
+	width:50%;
+	padding: 12px 20px;
+    margin: 5px 0 22px 0;
+    align-content: center;
+	border: none;
+	background: #EEEEEE;
+    display: block;
+    box-sizing: border-box;
+}
+
+#submitButton-login{
+	background-color: #16a085;
+	border-radius: 12px;
+	font-size: 13px;
+	width:10%;
+	color: white;
+	margin-left: 250px;
+}
+
+#submitButton-login:hover{
+	background-color: #107c67;
+	cursor: pointer;
 }
