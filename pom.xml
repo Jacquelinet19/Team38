@@ -16,7 +16,7 @@
 
     <!-- Project-specific properties -->
     <exec.mainClass>com.google.sps.ServerMain</exec.mainClass>
-    <googleCloudProjectId>tyoung-sps-spring21</googleCloudProjectId>
+    <googleCloudProjectId>spring21-sps-38</googleCloudProjectId>
   </properties>
 
     <dependencies>
