@@ -30,7 +30,7 @@ public class NewMenteeServlet extends HttpServlet {
     String menteeDesiredSkills = Jsoup.clean(request.getParameter("skill-desire"), Whitelist.none());
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    response.sendRedirect("/matchingPage.html?username="+menteeUsername+"&type=mentee");
+    
 
     Key menteeKey = datastore.newKeyFactory()
                     .setKind("Mentee")
@@ -46,5 +46,6 @@ public class NewMenteeServlet extends HttpServlet {
             .set("menteeDesiredSkills", menteeDesiredSkills)
             .build();
     datastore.put(mentee);
+    response.sendRedirect("/matchingPage.html?username="+menteeUsername+"&type=mentee");
   }
 }

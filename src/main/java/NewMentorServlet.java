@@ -30,7 +30,7 @@ public class NewMentorServlet extends HttpServlet {
     
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
-    response.sendRedirect("/matchingPage.html?username="+mentorUsername+"&type=mentor");
+    
 
     Key mentorKey = datastore.newKeyFactory()
                     .setKind("Mentor")
@@ -45,5 +45,6 @@ public class NewMentorServlet extends HttpServlet {
             .set("mentorExpertise", mentorExpertise)
             .build();
     datastore.put(mentor);
+    response.sendRedirect("/matchingPage.html?username="+mentorUsername+"&type=mentor");
   }
 }
