@@ -213,19 +213,24 @@ function validURL(redirectPage){
         //when we have a username logged in
         switch(redirectPage){
             case "homepage":
+
                 window.location.href = ("index.html?username="+username+"&type="+typeFeed);
+
+                var tag = document.createElement('div');
+                tag.className = "menuHome";
+                var Info = '<ul>'+ 
+				'<li class="current_page_item"><a href=index.html?username='+username+'&type='+typeFeed+'>Homepage</a></li>' + 
+                '<li><a href=matchingPage.html?username='+username+'&type='+typeFeed+'>Feed</a></li>' + 
+                '<li><a href=profile.html?username='+username+'&type='+typeFeed+'>Profile</a></li>' + 
+                '</ul>';
+                tag.innerHTML = Info;
+                var element = document.getElementById("menu");
+                element.appendChild(tag);
+                
                 break;
             
             case "feed":
                 window.location.href = ("matchingPage.html?username="+username+"&type="+typeFeed);
-                break;
-            
-            case "mentee":
-                window.location.href = ("mentee-sign-up.html?username="+username+"&type="+typeFeed);
-                break;
-
-            case "mentor":
-                window.location.href = ("mentor.html?username="+username+"&type="+typeFeed);
                 break;
             
             case "profile":
@@ -233,14 +238,37 @@ function validURL(redirectPage){
                 break;
             
             default:
-                window.location.href = ("#");
+                var tag = document.createElement('div');
+                tag.className = "menuHome";
+                var Info = '<ul>'+ 
+				'<li class="current_page_item"><a href=index.html?username='+username+'&type='+typeFeed+'>Homepage</a></li>' + 
+                '<li><a href=matchingPage.html?username='+username+'&type='+typeFeed+'>Feed</a></li>' + 
+                '<li><a href=profile.html?username='+username+'&type='+typeFeed+'>Profile</a></li>' + 
+                '</ul>';
+                tag.innerHTML = Info;
+                var element = document.getElementById("menu");
+                element.appendChild(tag);
         }
     }
     else{
         //when we don't have a user logged in
         switch(redirectPage){
             case 'homepage':
+
                 window.location.href = ("index.html");
+
+                var tag = document.createElement('div');
+                tag.className = "menuHome";
+                var Info = '<ul>'+ 
+                '<li class="current_page_item"><a href=("index.html)>Homepage</a></li>' + 
+                '<li><a href="mentor.html">Become a mentor</a></li>' + 
+                '<li><a href="mentee-sign-up.html">Become a mentee</a></li>' + 
+                '<li><a href="logInPage.html">Log In</a></li>' + 
+                '</ul>';
+                tag.innerHTML = Info;
+                var element = document.getElementById("menu");
+                element.appendChild(tag);
+
                 break;
             
             case 'mentee':
@@ -256,7 +284,18 @@ function validURL(redirectPage){
                 break;
 
             default:
-                window.location.href = ("#");
+                var tag = document.createElement('div');
+                tag.className = "menuHome";
+                var Info = '<ul>'+ 
+                '<li class="current_page_item"><a href="index.html">Homepage</a></li>' + 
+                '<li><a href="mentor.html">Become a mentor</a></li>' + 
+                '<li><a href="mentee-sign-up.html">Become a mentee</a></li>' + 
+                '<li><a href="logInPage.html">Log In</a></li>' + 
+                '</ul>';
+                tag.innerHTML = Info;
+                var element = document.getElementById("menu");
+                element.appendChild(tag);
+                break;
         }
     }
 }
