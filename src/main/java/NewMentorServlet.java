@@ -1,14 +1,15 @@
-import com.google.cloud.datastore.Datastore;
-import com.google.cloud.datastore.DatastoreOptions;
-import com.google.cloud.datastore.Entity;
-import com.google.cloud.datastore.FullEntity;
-import com.google.cloud.datastore.KeyFactory;
-import com.google.cloud.datastore.Key;
 import java.io.IOException;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.google.cloud.datastore.Datastore;
+import com.google.cloud.datastore.DatastoreOptions;
+import com.google.cloud.datastore.Entity;
+import com.google.cloud.datastore.Key;
+
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
 
@@ -29,7 +30,7 @@ public class NewMentorServlet extends HttpServlet {
     
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
-    response.sendRedirect("/matchingPage.html?username="+mentorUsername);
+    response.sendRedirect("/matchingPage.html?username="+mentorUsername+"&type=mentor");
 
     Key mentorKey = datastore.newKeyFactory()
                     .setKind("Mentor")

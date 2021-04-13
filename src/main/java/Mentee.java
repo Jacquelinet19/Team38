@@ -18,5 +18,4 @@ public final class Mentee{
         this.reason = reason;
         this.desiredSkills = desiredSkills;
     }
-
 }

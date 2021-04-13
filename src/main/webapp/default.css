@@ -200,8 +200,7 @@ hr {
 
 /** WRAPPER */
 
-#wrapper {
-	background: #FFFFFF url(images/bg01.png) repeat;
+#wrapper {	
 }
 
 #footer-wrapper
@@ -226,7 +225,6 @@ hr {
 #header-wrapper
 {
 	overflow: hidden;
-	/*background: url(images/bg01.png) repeat;*/
 	background-size: 70%;
     padding: 3px 0px 6px 0px;
     background: #333333;
@@ -264,20 +262,10 @@ hr {
 	{
 		letter-spacing: 0.10em;
         font-size: 3em;
+        text-decoration: none;
+        color: #FFF;
 	}
 	
-	#logo p 
-	{
-		letter-spacing: 0.10em;
-		color: #FFF;
-	}
-	
-	#logo a 
-	{
-		text-decoration: none;
-		color: #FFF;
-	}
-
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
