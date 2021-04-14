@@ -236,6 +236,10 @@ function validURL(redirectPage){
             case "profile":
                 window.location.href = ("profile.html?username="+username+"&type="+typeFeed);
                 break;
+
+            case "logout":
+                window.location.href = ("index.html");
+                break;
             
             default:
                 var tag = document.createElement('div');
@@ -244,6 +248,7 @@ function validURL(redirectPage){
 				'<li class="current_page_item"><a href=index.html?username='+username+'&type='+typeFeed+'>Homepage</a></li>' + 
                 '<li><a href=matchingPage.html?username='+username+'&type='+typeFeed+'>Feed</a></li>' + 
                 '<li><a href=profile.html?username='+username+'&type='+typeFeed+'>Profile</a></li>' + 
+                '<li><a href=index.html?>LogOut</a></li>' + 
                 '</ul>';
                 tag.innerHTML = Info;
                 var element = document.getElementById("menu");
